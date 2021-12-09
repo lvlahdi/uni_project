@@ -27,7 +27,7 @@ cursor = cnx.cursor()
 # DB_NAME = 'test'
 TABLES = {}
 TABLES['NEWS'] = (
-    "CREATE TABLE news (title varchar(150), news_text text, ID int primary key auto_increment)")
+    "CREATE TABLE news (title varchar(500), news_text text, ID int primary key auto_increment)")
 NEWS_DICTIONARY = {}    # NOTE this will be used in insert to db function
 
 
@@ -75,7 +75,7 @@ def import_by_csv():
     To import files by a CSV file, you should create/copy/move a CSV in this format :
     "title,text" into the application.py path directory(next to main application)
     Every row, must contain just one title and one text part.
-    The title has 150 characters limit and text part can contain up to 64k characters.
+    The title has 500 characters limit and text part can contain up to 64k characters.
     Note that you have to bring the CSV file in current path and rename it to news.csv. In case
     to do these tasks wrong, the app will be having erred.
     ''')
