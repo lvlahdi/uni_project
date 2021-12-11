@@ -37,7 +37,7 @@ cd / path / to / uni_project
 py -m pip install -r requirements.txt
 ```
 
-Time to Check MySQL installed properly and check its connectivity :
+Time to check MySQL installed properly and check its connectivity :
 
 ### MySQL Connectivity Check
 
@@ -50,14 +50,3 @@ Time to Check MySQL installed properly and check its connectivity :
 ## Usage
 
 Now, you can simply work with .py file like `/ path / to / uni_project/project.py` or `py / path / to / uni_project/project.py` or `python3 / path / to / uni_project/project.py` or whatever works on your machine :)
-
----
-
-## TODO:
-
-- [x] data shows ugly and unclear in database after import. do it beautifuller.    # it could still be better than this but it's okay for now
-- [x] better record remover!
-- [x] create a GUI
-- [ ] find a suitable way to exit from app by user.
-- [ ] add to github
-- [ ] write full documentation, user's manual and readme for project.
