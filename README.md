@@ -11,18 +11,14 @@ A simple news reader/writer
 
 ### Clone repo
 
-    ```bash
     git clone https://github.com/lvlahdi/uni_project.git
-    ```
 
 3. Install dependcies :
 
 ### Install with PyPI
 
-    ```bash
     cd /path/to/uni_project
     pip3 install -r requirements.txt
-    ```
 
 ---
 
@@ -32,15 +28,11 @@ Now, you can simply work with .py file :
 
 ### LINUX
 
-    ```bash
     /path/to/uni_project/project.py
-    ```
 
 ### Windows
 
-    ```bash
     py /path/to/uni_project/project.py
-    ```
 
 ---
 
