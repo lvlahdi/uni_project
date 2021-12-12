@@ -10,7 +10,7 @@ from textwrap import fill
 
 
 # get the.py directory for some important reasons
-pyPath = os.path.dirname(__file__)
+HERE = os.path.dirname(__file__)
 
 
 # connecting to test db
@@ -56,7 +56,7 @@ def clearConsole():
 
 # import CSV content to db
 def before_import_to_db():
-    with open('%s/news.csv' % pyPath) as fin:
+    with open('%s/news.csv' % HERE) as fin:
         reader = csv.reader(fin)
         for key, value in reader:
             NEWS_DICTIONARY[key.strip()] = value.strip()
@@ -84,7 +84,7 @@ def import_by_csv():
     # we got python program directory on top of the code.
     # here, we will use that to access csv file without
     # requesting the user to run program from specific directory.
-    if os.path.isfile('%s/news.csv' % pyPath) == True:  # check news.csv file exist or not
+    if os.path.isfile('%s/news.csv' % HERE) == True:  # check news.csv file exist or not
         print('Alright. CSV file exist.')
         sleep(1)
         print('Time to check data formats...')
@@ -92,7 +92,7 @@ def import_by_csv():
         import pandas as pd  # [x] : complete this
         # reads in all the rows, but skips the first one as it is a header.
         # so that, we will set header=None to prevent logical errors on data format check.
-        df = pd.read_csv("%s/news.csv" % pyPath, header=None)
+        df = pd.read_csv("%s/news.csv" % HERE, header=None)
         total_rows = len(df.axes[0])    # axes of 0 is for a row
         total_cols = len(df.axes[1])    # axes of 1 is for a column
         if total_cols == 2:
@@ -111,7 +111,7 @@ def import_by_csv():
             sleep(3)
             return
         input()
-    elif os.path.isfile('%s/news.csv' % pyPath) == False:
+    elif os.path.isfile('%s/news.csv' % HERE) == False:
         print('"news.csv" file is not exist...\nYou will redirect to main menu.')
         return
 
